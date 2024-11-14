@@ -42,7 +42,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await axios.post("http://localhost:5001/api/register", data);
+      const res = await axios.post("https://ecommerce-api-kohl-sigma.vercel.app/api/register", data);
       toast.success(res.data);
       navigate('/')
     } catch (err) {

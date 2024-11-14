@@ -49,7 +49,7 @@ const ecomStore = (set, get) => ({
     }, 0);
   },
   actionLogin: async (form) => {
-    const res = await axios.post("http://localhost:5001/api/login", form);
+    const res = await axios.post("https://ecommerce-api-kohl-sigma.vercel.app/api/login", form);
     set({
       user: res.data.payload,
       token: res.data.token,

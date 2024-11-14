@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const changOrderStatus = async (token, data) => {
   return await axios.put(
-    "http://localhost:5001/api/admin/order-status",
+    "https://ecommerce-api-kohl-sigma.vercel.app/api/admin/order-status",
     data,
     {
       headers: {
@@ -13,7 +13,7 @@ export const changOrderStatus = async (token, data) => {
 };
 export const getOrderAdmin = async (token) => {
   return await axios.get(
-    "http://localhost:5001/api/admin/orders",
+    "https://ecommerce-api-kohl-sigma.vercel.app/api/admin/orders",
     {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -23,7 +23,7 @@ export const getOrderAdmin = async (token) => {
 };
 export const listUsers = async (token) => {
   return await axios.get(
-    "http://localhost:5001/api/users",
+    "https://ecommerce-api-kohl-sigma.vercel.app/api/users",
     {
       headers: {
         Authorization: `Bearer ${token}`,
@@ -33,7 +33,7 @@ export const listUsers = async (token) => {
 };
 export const changStatusUser = async (token,data) => {
   return await axios.post(
-    "http://localhost:5001/api/change-status",
+    "https://ecommerce-api-kohl-sigma.vercel.app/api/change-status",
     data,
     {
       headers: {
@@ -44,7 +44,7 @@ export const changStatusUser = async (token,data) => {
 };
 export const changRoleUser = async (token,data) => {
   return await axios.post(
-    "http://localhost:5001/api/change-role",
+    "https://ecommerce-api-kohl-sigma.vercel.app/api/change-role",
     data,
     {
       headers: {

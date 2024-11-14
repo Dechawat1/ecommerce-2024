@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const createProduct = async (token, form) => {
   // code body
-  return axios.post("http://localhost:5001/api/product", form, {
+  return axios.post("https://ecommerce-api-kohl-sigma.vercel.app/api/product", form, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -11,12 +11,12 @@ export const createProduct = async (token, form) => {
 
 export const listProduct = async (count = 20) => {
   // code body
-  return axios.get("http://localhost:5001/api/products/" + count);
+  return axios.get("https://ecommerce-api-kohl-sigma.vercel.app/api/products/" + count);
 };
 
 export const readProduct = async (token, id) => {
   // code body
-  return axios.get("http://localhost:5001/api/product/" + id, {
+  return axios.get("https://ecommerce-api-kohl-sigma.vercel.app/api/product/" + id, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -24,7 +24,7 @@ export const readProduct = async (token, id) => {
 };
 export const deleteProduct = async (token, id) => {
   // code body
-  return axios.delete("http://localhost:5001/api/product/" + id, {
+  return axios.delete("https://ecommerce-api-kohl-sigma.vercel.app/api/product/" + id, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -32,7 +32,7 @@ export const deleteProduct = async (token, id) => {
 };
 export const updateProduct = async (token, id, form) => {
   // code body
-  return axios.put("http://localhost:5001/api/product/" + id, form, {
+  return axios.put("https://ecommerce-api-kohl-sigma.vercel.app/api/product/" + id, form, {
     headers: {
       Authorization: `Bearer ${token}`,
     },
@@ -43,7 +43,7 @@ export const uploadFiles = async (token, form) => {
   // code
   // console.log('form api frontent', form)
   return axios.post(
-    "http://localhost:5001/api/images",
+    "https://ecommerce-api-kohl-sigma.vercel.app/api/images",
     {
       image: form,
     },
@@ -59,7 +59,7 @@ export const removeFiles = async (token, public_id) => {
   // code
   // console.log('form api frontent', form)
   return axios.post(
-    "http://localhost:5001/api/removeimages",
+    "https://ecommerce-api-kohl-sigma.vercel.app/api/removeimages",
     {
       public_id,
     },
@@ -73,12 +73,12 @@ export const removeFiles = async (token, public_id) => {
 
 export const searchFilters = async (arg) => {
   // code body
-  return axios.post("http://localhost:5001/api/search/filters", arg);
+  return axios.post("https://ecommerce-api-kohl-sigma.vercel.app/api/search/filters", arg);
 };
 
 export const listProductBy = async (sort, order, limit) => {
   // code body
-  return axios.post("http://localhost:5001/api/productby", {
+  return axios.post("https://ecommerce-api-kohl-sigma.vercel.app/api/productby", {
     sort,
     order,
     limit,
